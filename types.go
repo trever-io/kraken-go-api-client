@@ -570,6 +570,21 @@ type TradeInfo struct {
 	Miscellaneous string
 }
 
+// Trade represents a trade
+type Trade struct {
+	OrderTxid string  `json:"ordertxid"`
+	AssetPair string  `json:"pair"`
+	Time      float64 `json:"time"`
+	Type      string  `json:"type"`
+	OrderType string  `json:"ordertype"`
+	Price     float64 `json:"price,string"`
+	Cost      float64 `json:"cost,string"`
+	Fee       float64 `json:"fee,string"`
+	Volume    float64 `json:"vol,string"`
+	Margin    float64 `json:"margin,string"`
+	Misc      string  `json:"misc"`
+}
+
 // LedgersResponse represents an associative array of ledgers infos
 type LedgersResponse struct {
 	Ledger map[string]LedgerInfo `json:"ledger"`
